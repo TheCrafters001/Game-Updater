@@ -171,5 +171,15 @@
   <ItemGroup>
     <None Include="Resources\StatusButton1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GJPush\GJPush.vbproj">
+      <Project>{4d799f78-d4af-42b9-94df-4c027980ea54}</Project>
+      <Name>GJPush</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItchPush\ItchPush.vbproj">
+      <Project>{e2a103cd-8bcc-40a3-8059-fdd77fd748b5}</Project>
+      <Name>ItchPush</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
