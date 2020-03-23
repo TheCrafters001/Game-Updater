@@ -52,5 +52,9 @@ Public Class Form1
         PictureBox1.BackColor = Color.Gray
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FilesCheck.Show()
+    End Sub
+
 #End Region
 End Class
