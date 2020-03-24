@@ -6,7 +6,7 @@ Public Class GJPush
         If System.IO.File.Exists(SourcePathUpdateButler) Then
             Dim pHelp As New ProcessStartInfo
             pHelp.FileName = "gjpush.exe"
-            pHelp.Arguments = "-t " & token & " -g " & gameid & " -p " & packageid & " -r " & versionid & GameFile
+            pHelp.Arguments = "-t=" & token & " -g=" & gameid & " -p=" & packageid & " -r=" & versionid & " " & """" & GameFile & """"
             pHelp.UseShellExecute = True
             pHelp.WindowStyle = ProcessWindowStyle.Normal
             Dim proc As Process = Process.Start(pHelp)
@@ -35,7 +35,7 @@ Public Class GJPush
         If System.IO.File.Exists(SourcePathUpdateButler) Then
             Dim pHelp As New ProcessStartInfo
             pHelp.FileName = "gjpush.exe"
-            pHelp.Arguments = "-t " & token & " -g " & gameid & " -p " & packageid & " -r " & versionid & " -b " & GameFile
+            pHelp.Arguments = "-t=" & token & " -g=" & gameid & " -p=" & packageid & " -r=" & versionid & " -b " & """" & GameFile & """"
             pHelp.UseShellExecute = True
             pHelp.WindowStyle = ProcessWindowStyle.Normal
             Dim proc As Process = Process.Start(pHelp)
