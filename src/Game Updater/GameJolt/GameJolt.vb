@@ -1,6 +1,6 @@
 ﻿Public Class GameJolt
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        MessageBox.Show("Your User Token is a key that was issued to you when you signed up to GameJolt. You can find this key on the GameJolt website by clicking your Avatar (top right), and clicking Game Token", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Please read the notice in red at the bottom.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
@@ -98,5 +98,9 @@
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
 
+    End Sub
+
+    Private Sub LinkLabel7_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel7.LinkClicked
+        Process.Start("https://github.com/gamejolt/cli/#want-to-help-test")
     End Sub
 End Class

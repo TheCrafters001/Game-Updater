@@ -1,4 +1,4 @@
-﻿Imports GJPush
+﻿Imports AutoUpdaterDotNET
 
 Public Class Form1
 
@@ -55,7 +55,20 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AutoUpdater.ShowSkipButton = True
+        AutoUpdater.ShowRemindLaterButton = True
+        AutoUpdater.ReportErrors = True
+        AutoUpdater.RunUpdateAsAdmin = True
+        AutoUpdater.LetUserSelectRemindLater = True
+        AutoUpdater.RemindLaterTimeSpan = RemindLaterFormat.Hours
+        AutoUpdater.RemindLaterAt = 1
+        AutoUpdater.UpdateFormSize = New System.Drawing.Size(656, 490)
+        AutoUpdater.Start("http://api.thecrafters001.ga/updates/Launcher.xml")
         FilesCheck.Show()
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        MessageBox.Show("I need help with this. If you want to contribute to this application, you can view it at this link: https://github.com/TheCrafters001/Game-Updater", "Feature in the works.")
     End Sub
 
 #End Region

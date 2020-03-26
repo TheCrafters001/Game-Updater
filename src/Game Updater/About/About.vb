@@ -6,7 +6,7 @@ Public Class About
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        AutoUpdater.ShowSkipButton = False
+        AutoUpdater.ShowSkipButton = True
         AutoUpdater.ShowRemindLaterButton = True
         AutoUpdater.ReportErrors = True
         AutoUpdater.RunUpdateAsAdmin = True

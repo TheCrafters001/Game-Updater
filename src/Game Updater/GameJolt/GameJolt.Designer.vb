@@ -22,6 +22,7 @@ Partial Class GameJolt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GameJolt))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
@@ -45,6 +46,8 @@ Partial Class GameJolt
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,14 +66,14 @@ Partial Class GameJolt
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
+        Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "User Token"
+        Me.Label1.Text = "Token"
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(81, 9)
+        Me.LinkLabel1.Location = New System.Drawing.Point(56, 9)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(13, 13)
         Me.LinkLabel1.TabIndex = 2
@@ -232,13 +235,13 @@ Partial Class GameJolt
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(155, 17)
         Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Browser Build (.zip, .rar, .7z)"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(113, 17)
@@ -259,12 +262,35 @@ Partial Class GameJolt
         Me.Label6.Text = "WARNING:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GameJoltPush (GJPush for short) is not in a stable state." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Please use t" &
     "his with caution!"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(12, 303)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(401, 96)
+        Me.Label7.TabIndex = 39
+        Me.Label7.Text = resources.GetString("Label7.Text")
+        '
+        'LinkLabel7
+        '
+        Me.LinkLabel7.AutoSize = True
+        Me.LinkLabel7.Location = New System.Drawing.Point(152, 386)
+        Me.LinkLabel7.Name = "LinkLabel7"
+        Me.LinkLabel7.Size = New System.Drawing.Size(102, 13)
+        Me.LinkLabel7.TabIndex = 40
+        Me.LinkLabel7.TabStop = True
+        Me.LinkLabel7.Text = "His words, not mine."
+        '
         'GameJolt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(434, 451)
+        Me.Controls.Add(Me.LinkLabel7)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
@@ -321,4 +347,6 @@ Partial Class GameJolt
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents LinkLabel6 As LinkLabel
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents LinkLabel7 As LinkLabel
 End Class

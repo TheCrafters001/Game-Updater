@@ -33,7 +33,6 @@ Public Class itch
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            'ItchPush.ItchPush.login()
             ItchPush.ItchPush.Update()
             ItchPush.ItchPush.normalbuild(TextBox5.Text, TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox4.Text)
         Catch ex As Exception

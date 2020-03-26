@@ -41,6 +41,7 @@ Partial Class itch
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button2
@@ -204,10 +205,23 @@ Partial Class itch
         Me.Label6.ForeColor = System.Drawing.Color.Yellow
         Me.Label6.Location = New System.Drawing.Point(12, 205)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(396, 48)
+        Me.Label6.Size = New System.Drawing.Size(391, 48)
         Me.Label6.TabIndex = 37
-        Me.Label6.Text = "WARNING:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "If butler fails to see that you are logged into this system," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the updat" &
-    "e will not go through, and you will need to login!"
+        Me.Label6.Text = "WARNING:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "If butler fails to see that you are logged into this system," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "it will p" &
+    "rompt you to login befor making any changes."
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(9, 253)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(417, 64)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "NOTICE:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "iOS is not supported by butler. Pushing games for iOS must " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "be done via" &
+    " Apple's App Store. There is no promises that " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "your app will be accepted onto t" &
+    "heir app store."
         '
         'itch
         '
@@ -215,6 +229,7 @@ Partial Class itch
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(434, 451)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button2)
@@ -262,4 +277,5 @@ Partial Class itch
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class
