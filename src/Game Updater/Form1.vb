@@ -63,7 +63,7 @@ Public Class Form1
         AutoUpdater.RemindLaterTimeSpan = RemindLaterFormat.Hours
         AutoUpdater.RemindLaterAt = 1
         AutoUpdater.UpdateFormSize = New System.Drawing.Size(656, 490)
-        AutoUpdater.Start("http://api.thecrafters001.ga/updates/Launcher.xml")
+        AutoUpdater.Start("http://api.thecrafters001.ga/updates/gameupdater.xml")
         FilesCheck.Show()
     End Sub
 

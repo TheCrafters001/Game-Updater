@@ -14,7 +14,7 @@ Public Class About
         AutoUpdater.RemindLaterTimeSpan = RemindLaterFormat.Hours
         AutoUpdater.RemindLaterAt = 1
         AutoUpdater.UpdateFormSize = New System.Drawing.Size(554, 489)
-        AutoUpdater.Start("http://api.thecrafters001.ga/updates/Launcher.xml")
+        AutoUpdater.Start("http://api.thecrafters001.ga/updates/gameupdater.xml")
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
