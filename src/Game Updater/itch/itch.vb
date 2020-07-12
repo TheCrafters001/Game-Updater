@@ -20,7 +20,7 @@ Public Class itch
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-        MessageBox.Show("Select what Operating System(s) (OS(s)) that your game is compatable with", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Select what Operating System(s) (OS(s)) that your game is compatible with", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub LinkLabel4_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
@@ -32,11 +32,23 @@ Public Class itch
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
-            ItchPush.ItchPush.Update()
-            ItchPush.ItchPush.normalbuild(TextBox5.Text, TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox4.Text)
-        Catch ex As Exception
-            MessageBox.Show("The following error occurred: " & vbCrLf & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        If RadioButton1.Checked = True Then
+            Try
+                ItchPush.ItchPush.normalbuild(TextBox5.Text, TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox4.Text)
+            Catch ex As Exception
+                MessageBox.Show("The following error occurred: " & vbCrLf & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        ElseIf RadioButton2.Checked = True Then
+            Try
+                ItchPush.ItchPush.Verbose(TextBox5.Text, TextBox1.Text, TextBox2.Text, ComboBox1.Text, TextBox4.Text)
+            Catch ex As Exception
+                MessageBox.Show("The following error occurred: " & vbCrLf & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub LinkLabel6_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel6.LinkClicked
+        MessageBox.Show("Be very chatty about what's happening while you are pushing your game.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

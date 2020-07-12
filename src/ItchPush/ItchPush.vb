@@ -1,5 +1,18 @@
+Imports System
+Imports System.Collections.Generic
+Imports System.ComponentModel
+Imports System.Data
+Imports System.Drawing
+Imports System.Linq
+Imports System.Text
+Imports System.Threading.Tasks
+Imports System.Windows.Forms
+
+
 Public Class ItchPush
     Public Shared Sub normalbuild(ByVal folder As String, ByVal username As String, ByVal gameurl As String, ByVal os As String, ByVal version As String)
+        Update()
+
         Dim SourcePathUpdateButler As String = "butler.exe" 'check for butler
         Dim FilenameUpdate As String = System.IO.Path.GetFileName(SourcePathUpdateButler) 'get the filename of the original file without the directory on it
         If System.IO.File.Exists(SourcePathUpdateButler) Then
@@ -9,6 +22,7 @@ Public Class ItchPush
             pHelp.UseShellExecute = True
             pHelp.WindowStyle = ProcessWindowStyle.Normal
             Dim proc As Process = Process.Start(pHelp)
+            proc.WaitForExit()
         Else
             ' The following example requires that Option Infer be set to On.
 
@@ -18,26 +32,23 @@ Public Class ItchPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
-    Public Shared Sub status(ByVal folder As String, ByVal username As String, ByVal gameurl As String, ByVal os As String, ByVal version As String)
+    Public Shared Sub Verbose(ByVal folder As String, ByVal username As String, ByVal gameurl As String, ByVal os As String, ByVal version As String)
+        Update()
+
         Dim SourcePathUpdateButler As String = "butler.exe" 'check for butler
         Dim FilenameUpdate As String = System.IO.Path.GetFileName(SourcePathUpdateButler) 'get the filename of the original file without the directory on it
         If System.IO.File.Exists(SourcePathUpdateButler) Then
             Dim pHelp As New ProcessStartInfo
             pHelp.FileName = "butler.exe"
-            pHelp.Arguments = "status"
+            pHelp.Arguments = "push """ & folder & """ " & username & "/" & gameurl & ":" & os & " --userversion " & version & " --verbose"
             pHelp.UseShellExecute = True
             pHelp.WindowStyle = ProcessWindowStyle.Normal
             Dim proc As Process = Process.Start(pHelp)
+            proc.WaitForExit()
         Else
             ' The following example requires that Option Infer be set to On.
 
@@ -47,14 +58,8 @@ Public Class ItchPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
     Public Shared Sub login()
@@ -76,14 +81,8 @@ Public Class ItchPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
     Public Shared Sub Update()
@@ -96,6 +95,7 @@ Public Class ItchPush
             pHelp.UseShellExecute = True
             pHelp.WindowStyle = ProcessWindowStyle.Normal
             Dim proc As Process = Process.Start(pHelp)
+            proc.WaitForExit()
         Else
             ' The following example requires that Option Infer be set to On.
 
@@ -105,14 +105,8 @@ Public Class ItchPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 End Class

@@ -1,4 +1,6 @@
 
+Imports System.Windows.Forms
+
 Public Class GJPush
     Public Shared Sub normalbuild(ByVal token As String, ByVal gameid As Integer, ByVal packageid As Integer, ByVal versionid As String, ByVal GameFile As String)
         Dim SourcePathUpdateButler As String = "gjpush.exe" 'check for gamejolt push
@@ -19,14 +21,8 @@ Public Class GJPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
     Public Shared Sub browserbuild(ByVal token As String, ByVal gameid As Integer, ByVal packageid As Integer, ByVal versionid As String, ByVal GameFile As String)
@@ -48,14 +44,8 @@ Public Class GJPush
             ' Define a title for the message box.
             Dim title = "Error: File Missing"
 
-            ' Now define a style for the message box. In this example, the
-            ' message box will have Yes and No buttons, the default will be
-            ' the No button, and a Critical Message icon will be present.
-            Dim style = MsgBoxStyle.OkOnly Or MsgBoxStyle.DefaultButton1 Or
-            MsgBoxStyle.Critical
-
             ' Display the message box and save the response, Yes or No.
-            Dim response = MsgBox(msg, style, title)
+            Dim response = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End If
     End Sub

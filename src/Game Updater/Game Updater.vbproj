@@ -214,5 +214,11 @@
   <ItemGroup>
     <None Include="Resources\gameupdater_logo_notext_tgy_icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameUpdater_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameUpdater_Logo_NoText.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("DownloadFile")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("Used for downloading files from trusted sources.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("DownloadFile")>
 <Assembly: AssemblyCopyright("Copyright ©  2020")>
