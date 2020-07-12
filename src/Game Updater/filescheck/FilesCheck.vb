@@ -19,7 +19,7 @@ Public Class FilesCheck
                     MessageBox.Show("No File Will Be Downloaded", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             Catch ex As Exception
-                MessageBox.Show("An error occurred while downloading gjpush:" & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("An error occurred while downloading gjpush:" & vbCrLf & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
         If My.Computer.FileSystem.FileExists(".\butler.exe") Then
@@ -35,7 +35,7 @@ Public Class FilesCheck
                     MessageBox.Show("No File Will Be Downloaded", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             Catch ex As Exception
-                MessageBox.Show("An error occurred while downloading butler:" & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("An error occurred while downloading butler:" & vbCrLf & ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
         Me.Close()

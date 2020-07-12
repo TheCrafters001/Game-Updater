@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A2FFFF8-DD99-4391-9707-B5686DD97D9E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>Game_Updater.My.MyApplication</StartupObject>
-    <RootNamespace>Game_Updater</RootNamespace>
-    <AssemblyName>Game Updater</AssemblyName>
+    <ProjectGuid>{FABF3A2E-60FA-484D-933A-4E67CFFBB620}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Game_Updater_Console.Module1</StartupObject>
+    <RootNamespace>Game_Updater_Console</RootNamespace>
+    <AssemblyName>Game Updater Console</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Game Updater.xml</DocumentationFile>
+    <DocumentationFile>Game Updater Console.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Game Updater.xml</DocumentationFile>
+    <DocumentationFile>Game Updater Console.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,21 +47,10 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Resources\gameupdater_logo_notext_tgy_icon.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET, Version=1.5.8.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autoupdater.NET.Official.1.5.8\lib\net40\AutoUpdater.NET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,50 +63,17 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About\About.Designer.vb">
-      <DependentUpon>About.vb</DependentUpon>
-    </Compile>
-    <Compile Include="About\About.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="filescheck\FilesCheck.Designer.vb">
-      <DependentUpon>FilesCheck.vb</DependentUpon>
-    </Compile>
-    <Compile Include="filescheck\FilesCheck.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GameJolt\GameJolt.Designer.vb">
-      <DependentUpon>GameJolt.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GameJolt\GameJolt.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="itch\itch.Designer.vb">
-      <DependentUpon>itch.vb</DependentUpon>
-    </Compile>
-    <Compile Include="itch\itch.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,21 +87,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="About\About.resx">
-      <DependentUpon>About.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="filescheck\FilesCheck.resx">
-      <DependentUpon>FilesCheck.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GameJolt\GameJolt.resx">
-      <DependentUpon>GameJolt.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="itch\itch.resx">
-      <DependentUpon>itch.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -154,7 +95,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -165,34 +105,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Resources\GameJolt_Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Itch.IO_Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StatusButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\About Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="itch\Status\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\About Button1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GameJolt_Button1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Itch.IO_Button1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\StatusButton1.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DownloadFile\DownloadFile.vbproj">
@@ -207,12 +119,6 @@
       <Project>{e2a103cd-8bcc-40a3-8059-fdd77fd748b5}</Project>
       <Name>ItchPush</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GitHub.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gameupdater_logo_notext_tgy_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

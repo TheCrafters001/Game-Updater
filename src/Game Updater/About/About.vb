@@ -20,4 +20,17 @@ Public Class About
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Me.Close()
     End Sub
+
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        Try
+            Dim DlgResult As DialogResult = MessageBox.Show("This will check if there are any missing files, then it will download them from the internet if they are. Are you sure you want to check for files?", "Check for Missing Files", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+            If DlgResult = DialogResult.Yes Then
+                FilesCheck.Show()
+            Else
+                MessageBox.Show("Okay, I will not check for files!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

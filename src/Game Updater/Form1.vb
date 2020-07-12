@@ -11,15 +11,11 @@ Public Class Form1
         GameJolt.Show()
         Me.Close()
     End Sub
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        MessageBox.Show("Status feature will be coming in a later update.")
-    End Sub
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         About.Show()
     End Sub
 
 #End Region
-
 
 #Region "Hover"
     Private Sub PictureBox1_MouseHover(sender As Object, e As EventArgs) Handles PictureBox1.MouseHover
@@ -30,20 +26,12 @@ Public Class Form1
         PictureBox2.BackColor = Color.DimGray
     End Sub
 
-    Private Sub PictureBox3_MouseHover(sender As Object, e As EventArgs) Handles PictureBox3.MouseHover
-        PictureBox3.BackColor = Color.DimGray
-    End Sub
-
     Private Sub PictureBox4_MouseHover(sender As Object, e As EventArgs) Handles PictureBox4.MouseHover
         PictureBox4.BackColor = Color.DimGray
     End Sub
 
     Private Sub PictureBox4_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox4.MouseLeave
         PictureBox4.BackColor = Color.Gray
-    End Sub
-
-    Private Sub PictureBox3_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox3.MouseLeave
-        PictureBox3.BackColor = Color.Gray
     End Sub
 
     Private Sub PictureBox2_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox2.MouseLeave
@@ -67,9 +55,10 @@ Public Class Form1
         FilesCheck.Show()
     End Sub
 
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
         MessageBox.Show("I need help with this. If you want to contribute to this application, you can view it at this link: https://github.com/TheCrafters001/Game-Updater", "Feature in the works.")
     End Sub
 
 #End Region
+
 End Class
