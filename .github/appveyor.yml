@@ -8,4 +8,5 @@ clone_folder: C:\TheCrafters001\Build\Game-Updater
 before_build:
 - ps: nuget restore 'C:\TheCrafters001\Build\Game-Updater\src\Game Updater.sln'
 build:
+  project: C:\TheCrafters001\Build\Game-Updater\src\Game Updater.sln
   verbosity: minimal
