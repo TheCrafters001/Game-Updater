@@ -4,35 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76D72CD2-57B0-41C5-B3DD-2A12B56C588B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>Game_Updater.My.MyApplication</StartupObject>
-    <RootNamespace>Game_Updater</RootNamespace>
-    <AssemblyName>Game Updater</AssemblyName>
+    <ProjectGuid>{EEDDC550-932A-49B4-A7B9-3C79F2908B50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ItchPush</RootNamespace>
+    <AssemblyName>ItchPush</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Game Updater.xml</DocumentationFile>
+    <DocumentationFile>ItchPush.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Game Updater.xml</DocumentationFile>
+    <DocumentationFile>ItchPush.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,14 +43,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Resources\gameupdater_logo_notext_tgy_icon.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -68,38 +59,17 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Misc\About.Designer.vb">
-      <DependentUpon>About.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\About.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc\Licenses.Designer.vb">
-      <DependentUpon>Licenses.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Misc\Licenses.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ItchPush.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,15 +83,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Misc\About.resx">
-      <DependentUpon>About.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc\Licenses.resx">
-      <DependentUpon>Licenses.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -139,45 +100,11 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GameUpdater_Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GameUpdater_Logo_NoText.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gameupdater_logo_notext_tgy_icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GameUpdater_Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Itch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\About.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GameJolt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameJolt\" />
-    <Folder Include="Itch\" />
-    <Folder Include="Scripts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gplv3-with-text-136x68.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GJPusher\GJPusher.vbproj">
-      <Project>{52e89463-88f8-488b-89b9-7a943691c696}</Project>
-      <Name>GJPusher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ItchPush\ItchPush.vbproj">
-      <Project>{eeddc550-932a-49b4-a7b9-3c79f2908b50}</Project>
-      <Name>ItchPush</Name>
+    <ProjectReference Include="..\DownloadFile\DownloadFile.vbproj">
+      <Project>{d8532e8e-04b8-4447-8933-ae72b65fa934}</Project>
+      <Name>DownloadFile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
