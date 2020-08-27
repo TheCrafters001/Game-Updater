@@ -1,11 +1,11 @@
-version 2.0.0.{build}
-image Visual Studio 2019
-configuration
+version: 2.0.0.{build}
+image: Visual Studio 2019
+configuration:
 - Debug
 - Release
-platform Any CPU
-clone_folder CTheCrafters001BuildGame-Updatersrcbin
-before_build
-- ps nuget restore 'CTheCrafters001BuildGame-UpdatersrcbinsrcGame Updater.sln'
-build
-  verbosity minimal
+platform: Any CPU
+clone_folder: C:\TheCrafters001\Build\Game-Updater\src\bin
+before_build:
+- ps: nuget restore 'C:\TheCrafters001\Build\Game-Updater\src\bin\src\Game Updater.sln'
+build:
+  verbosity: minimal
