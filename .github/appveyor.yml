@@ -4,8 +4,8 @@ configuration:
 - Debug
 - Release
 platform: Any CPU
-clone_folder: C:\TheCrafters001\Build\Game-Updater\src\bin
+clone_folder: C:\TheCrafters001\Build\Game-Updater
 before_build:
-- ps: nuget restore 'C:\TheCrafters001\Build\Game-Updater\src\bin\src\Game Updater.sln'
+- ps: nuget restore 'C:\TheCrafters001\Build\Game-Updater\src\Game Updater.sln'
 build:
   verbosity: minimal
