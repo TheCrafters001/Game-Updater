@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Itch\Itch.Designer.vb">
+      <DependentUpon>Itch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Itch\Itch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Misc\About.Designer.vb">
       <DependentUpon>About.vb</DependentUpon>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Itch\Itch.resx">
+      <DependentUpon>Itch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Misc\About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GameJolt\" />
-    <Folder Include="Itch\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
