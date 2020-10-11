@@ -8,4 +8,10 @@
         Itch.Show()
         Me.Close()
     End Sub
+
+    Private Sub gamejolt_pcbox_Click(sender As Object, e As EventArgs) Handles gamejolt_pcbox.Click
+        GJPusher.GJPusher.FileCheck()
+        GameJolt.Show()
+        Me.Close()
+    End Sub
 End Class
