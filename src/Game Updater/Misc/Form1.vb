@@ -5,5 +5,7 @@
 
     Private Sub itch_pcbox_Click(sender As Object, e As EventArgs) Handles itch_pcbox.Click
         ItchPush.ItchPush.FileCheck()
+        Itch.Show()
+        Me.Close()
     End Sub
 End Class
